@@ -9,7 +9,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 			<div className='bg-slate-100 p-2'>
-      	<p className='text-3xl font-bold'>Next Shop</p>
+      	<p className='text-xl font-bold'>Next Shop</p>
         <p className='text-sm'>HyeongUk Kang</p>
         <p> - TailwindCSS </p>
         <p> - MongoDB </p>
