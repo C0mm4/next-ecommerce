@@ -5,11 +5,11 @@ export default function Productitem({product}) {
   return (
     <div className='card'>
 			<Link href={`/product/${product.slug}`}>
-  	  	<a>
-  	      <img src={product.image} alt = {product.name}
-   	     className="rounded shadow"/>
-  	    </a>
-  	  </Link>
+        <a>
+          <img src={product.image} alt = {product.name}
+        className="rounded shadow"/>
+        </a>
+      </Link>
 
 			<div className='flex flex-col items-center
       justify-center p-5'>

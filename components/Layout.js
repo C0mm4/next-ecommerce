@@ -1,11 +1,16 @@
 import Head from "next/head";
-import React, { useContext } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import Link from "next/link";
 import { Store } from "../utils/Store";
 
 export default function Layout({ title, children }) {
   const { state } = useContext(Store);
   const { cart } = state;
+  const [cartItemsCount, setCartItemsCount] = useState(0)
+  useEffect(() => {
+    setCartItemsCount(cart.cartItems.reduce((a, c) => a + c.quantity, 0))
+    }, [cart.cartItems])
+    
   return (
     <div>
       <Head>
@@ -20,12 +25,15 @@ export default function Layout({ title, children }) {
               <a className="text-lg font-bold"> Next Shop</a>
             </Link>
             <div>
+              <Link href="/profile">
+                <a className="p-2">Profile</a>
+              </Link>
               <Link href="/cart">
                 <a className="p-2">
                   Cart
-                  {cart.cartItems.length > 0 && (
+                  {cartItemsCount > 0 && (
                     <span className="ml-1 rounded-full bg-red-600 px-2 py-1 text-xs font-bold text-white">
-                      {cart.cartItems.reduce((a, c) => a + c.quantity, 0)}
+                      {cartItemsCount}
                     </span>
                   )}
                 </a>
