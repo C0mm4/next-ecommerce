@@ -1,4 +1,4 @@
-import Head from 'next/head'
+
 import Layout from '../components/Layout'
 import Productitem from '../components/Productitem'
 import data from'../utils/data'

@@ -41,7 +41,7 @@ export default function ProductScreen () {
           width = {640}
           height = {640}
           layout = 'responsive'
-        	>
+					>
           </Image>
         </div>
         <div>
