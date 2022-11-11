@@ -40,6 +40,55 @@ export default function LoginScreen() {
       toast.error(getError(err))
     }
   }
+
+  
+  const githubLoginHandler = async () => {
+    try {
+      const result = await signIn("github", {
+        redirect: false,
+      });
+      console.log("Github login: " + result);
+    } catch (err) {
+      toast.error(getError(err));
+    }
+  }
+
+  const GoogleLoginHandler = async() => {
+    try{
+      const result = await signIn('google', {
+        redirect : false,
+      })
+      console.log("GoogleLogin " + result);
+    }
+    catch (err){
+      toast.error(getError(err))
+    }
+  }
+
+  const KakaoLoginHandler = async() =>{
+    try{
+      const result = await signIn('kakao', {
+      redirect : false,
+    })
+    console.log("KakaoLogin " + result);
+		}
+    catch(err){
+      toast.error(getError(err))
+    }
+  }
+
+  const NaverLoginHandler = async() =>{
+    try{
+      const result = await signIn('naver',{
+        redirect : false,
+      })
+      console.log("NaverLogin " + result);
+    }
+    catch(err){
+      toast.error(getError(err))
+    }
+  }
+
   return (
     <div>
       <Layout title = 'Login'>
@@ -79,6 +128,44 @@ export default function LoginScreen() {
           <div className = 'mb-4'>
             Don&apos;t have an acount? &nbsp;
             <Link href='/register'>Register</Link>
+          </div>
+					<div className='p-5 bg-gray-500 rounded-lg'>
+						<div className="mb-4">
+							<button
+								className="primary-button w-full"
+								type="button"
+								onClick={githubLoginHandler}
+							>
+                Github Login
+              </button>
+					</div>
+						<div className="mb-4">
+							<button
+								className="primary-button w-full"
+								type="button"
+								onClick={GoogleLoginHandler}
+							>
+                Google Login
+              </button>
+					</div>
+						<div className="mb-4">
+							<button
+								className="primary-button w-full"
+								type="button"
+								onClick={KakaoLoginHandler}
+							>
+                Kakao Login
+              </button>
+						</div>
+            <div className="mb-4">
+							<button
+								className="primary-button w-full"
+								type="button"
+								onClick={NaverLoginHandler}
+							>
+                Naver Login
+              </button>
+						</div>
           </div>
         </form>
       </Layout>
