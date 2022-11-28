@@ -42,6 +42,9 @@ export default function Layout({ title, children }) {
               <a className="text-lg font-bold">NextShop</a>
             </Link>
             <div>
+              <Link href='/crypto'>
+                <a className='p-2'>Crypto</a>
+              </Link>
               <Link href="/profile">
                 <a className="p-2">Profile</a>
               </Link>
