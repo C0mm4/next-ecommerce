@@ -1,4 +1,4 @@
-import forge from 'node-forge'
+
 import { computePbkdf2 } from '../../../utils/crypto-functions'
 
 export default function handler(req, res) {
