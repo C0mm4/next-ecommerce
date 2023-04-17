@@ -39,7 +39,7 @@ export default function Layout({ title, children }) {
         <header>
           <nav className="flex flex-row h-12 items-center px-4 justify-between shadow-md bg-slate-200">
             <Link href="/">
-              <a className="text-lg font-bold">NextShop</a>
+              <a className="text-lg font-bold">강형욱&#39;s NextShop</a>
             </Link>
             <div>
               <Link href='/crypto'>
@@ -101,7 +101,7 @@ export default function Layout({ title, children }) {
         </header>
         <main className="container m-auto mt-4">{children}</main>
         <footer className="flex h-10 justify-center items-center shadow-inner bg-red-100">
-          <p>Copyright &copy; 2022 Nextshop</p>
+          <p>Copyright &copy; 2023 Nextshop</p>
         </footer>
       </div>
     </>
